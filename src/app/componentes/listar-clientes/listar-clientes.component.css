@@ -1,0 +1,21 @@
+
+@media
+	only screen
+	and (max-width: 1320px), (min-device-width: 650px)
+	and (max-device-width: 1350px)  {
+
+		td:nth-of-type(1):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Id process:"; }
+		td:nth-of-type(2):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Orden:"; }
+		td:nth-of-type(3):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Cliente:"; }
+		td:nth-of-type(4):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Documento:"; }
+		td:nth-of-type(5):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Linea:"; }
+		td:nth-of-type(6):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Fecha Portacion:"; }
+		td:nth-of-type(6):before {text-align:left; font-weight: bold; font-size: 14px; font-family: 'Lato', sans-serif; color: #688a7e; content: "Estado:"; }
+}
+
+.color-table {
+	border-style: solid;
+  border-width: 1px 1px 2px;
+  border-color: #ccc;
+  margin-bottom: 68px !important;
+}

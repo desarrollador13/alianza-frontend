@@ -1,0 +1,143 @@
+	<div class="row">
+	 <div 
+  	class="col-lg-6 col-md-12 col-sm-12 card custom-form"
+    style="padding: 23px; box-shadow: 2px 26px 46px 0 rgba(0,0,0,.3);">
+
+    <form  
+    	[formGroup]= "form"
+    	class="row" 
+    	(ngSubmit)="validarFormulario($event)">
+<!-- offset-md-1 -->
+    	<div class="col-12   mt-1"> 
+    		 <div 
+    		 		*ngIf="errorFecha" 
+    		 		class="text-danger" 
+    		 		style="margin-left: 12px;">
+          	<div 
+          		*ngIf="errorFecha" 
+          		style="color:#d22c0b; 
+          		font-size:18px;
+          		margin-left: 50px;">{{mesa}}.</div>
+          	<!-- <div *ngIf="errorLoguin">{{msgLoguinp}}.</div> -->
+          </div> 
+    	</div>
+
+    	<div class=" col-9  offset-md-1">
+	    	<label 
+	    	  class="custom-label"
+	    	  style="margin-top: 1px;" 
+	        >Nombres Apellido: </label>
+	        <input
+	        	class="form-control custom-input"
+	        	style="margin-top:1px"
+	        	formControlName="nombre"
+	        	 [ngClass]="{ 'is-invalid': submit && fl.nombre.errors }"
+	          type="text">
+	        <div 
+	        		*ngIf="submit && fl.nombre.errors" 
+	        		class="text-danger" 
+	        		style="margin-left: 12px;">
+          	<div *ngIf="fl.nombre.errors.required">el campo nombre es obligatorio.</div>
+          </div> 
+	    </div>
+
+	    <div class="col-9  offset-md-1">
+	    	<label 
+	    		class="custom-label"
+	    		style="margin-top: 1px;" 
+	        >Telefono: </label>
+	        <input 
+	        	class="form-control custom-input"
+	        	style="margin-top:1px"
+	        	formControlName="telefono"
+	        	 [ngClass]="{ 'is-invalid': submit && fl.telefono.errors }"
+	          type="text"> 
+	        <div 
+	        		*ngIf="submit && fl.telefono.errors" 
+	        		class="text-danger"
+	        		style="margin-left: 12px;">
+          	<div *ngIf="fl.telefono.errors.required">el campo telefono es obligatorio.</div>
+          </div> 
+	    </div>
+
+	   	<div class="col-9  offset-md-1">
+	    	<label 
+	    		class="custom-label"
+	    		style="margin-top: 1px;" 
+	        >E-mail: </label>
+	        <input 
+	          ngModel email="true"
+	        	type="email"
+	        	class="form-control custom-input"
+	        	style="margin-top:1px"
+	        	formControlName="email"
+	        	[ngClass]="{ 'is-invalid': submit && fl.email.errors }"
+	          > 
+	        <div 
+	        		*ngIf="submit && fl.email.errors" 
+	        		class="text-danger"
+	        		style="margin-left: 12px;">
+          	<div *ngIf="fl.email.errors.required">el campo email es obligatorio.</div>
+          	<div *ngIf="fl.email.errors.email">Email no es valido example@email.com</div>
+          </div> 
+	    </div>
+
+	    <div class="col-9   offset-md-1">
+	    	<label 
+	    		class="custom-label"
+	    		style="margin-top: 1px;" 
+	        >fecha de inicio: </label>
+	        <input 
+	        	class="form-control custom-input"
+	        	style="margin-top:1px"
+	        	formControlName="fechaInicio"
+	        	 [ngClass]="{ 'is-invalid': submit && fl.fechaInicio.errors }"
+	          type="date"> 
+	        <div 
+	        		*ngIf="submit && fl.fechaInicio.errors" 
+	        		class="text-danger"
+	        		style="margin-left: 12px;">
+          	<div *ngIf="fl.fechaInicio.errors.required">el campo fechaInicio es obligatorio.</div>
+          </div> 
+	    </div>
+
+	    <div class="col-9  offset-md-1">
+	    	<label 
+	    		class="custom-label"
+	    		style="margin-top: 1px;" 
+	        >fecha de fin: </label>
+	        <input 
+	        	class="form-control custom-input"
+	        	style="margin-top:1px"
+	        	formControlName="fechaFin"
+	        	 [ngClass]="{ 'is-invalid': submit && fl.fechaFin.errors }"
+	          type="date"> 
+	        <div 
+	        		*ngIf="submit && fl.fechaFin.errors" 
+	        		class="text-danger"
+	        		style="margin-left: 12px;">
+          	<div *ngIf="fl.fechaFin.errors.required">el campo fechaFin es obligatorio.</div>
+          </div> 
+	    </div>
+<!-- offset-md-1 -->
+	   <!--  <div class=""> -->
+	    	<button 
+	    		class="col-7 mt-4 offset-md-2 text-center button-sesion btn btn-primary" 
+	    		>OK</button>
+	    <!-- </div> [disabled]="buttom"-->
+
+    </form>
+  </div>
+  <div class="col-lg-5 col-md-12 offset-md-1 col-sm-12 d-md-none  d-xs-none d-lg-block card images-div">
+
+  	<div  class="row">
+  		<p class="col-12 mt-4 offset-md-3 mt-3"><strong>Registrar Cliente Alianza</strong><p>
+  		<!-- images -->
+	  	<img 
+	  	 class="col-12 mt-4"
+	  		src="/assets/alianza.png" 
+	  		height="150" 
+	  		width="150">
+	  	</div>
+  </div>
+</div>

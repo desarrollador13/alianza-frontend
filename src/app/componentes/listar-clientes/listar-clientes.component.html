@@ -1,0 +1,55 @@
+<p><strong>Listar Clientes</strong></p>
+<div>
+	<div class="row">
+		<form 
+    	[formGroup]= "form" 
+    	(ngSubmit)="validarFormulario($event)">
+			<div class="input-group">
+			  <div class="form-outline">
+			    <input 
+			    	id="search-input" 
+			    	type="search" 
+			    	formControlName = "parametro"
+			    	class="form-control" />
+			  </div>
+			  <button 
+			  	type="button" 
+			  	(click)="validarFormulario($event)"
+			  	class="btn btn-primary">
+			  	Buscar
+			  </button>
+			</div>
+	  </form>
+	</div>
+	 <div class="row mt-3">
+	 	<div class="col-lg-12 col-md-12 color-table">
+	 		<div class="panel panel-default">
+			 	<div class="panel-body">
+				  <table class="table bootstrap-datatable countries table table-striped">
+				    <thead>
+				      <tr>
+				        <th>Id</th>
+				        <th>Shared Keys</th>
+				        <th>Business ID</th>
+				        <th>E-mail</th>
+				        <th>Phone</th>
+				        <th>Data Added</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr *ngFor='let elem of dato'>
+				        <td>{{elem.id}}</td>
+				        <td>{{elem.llaveCompartida}}</td>
+				        <td>{{elem.nombre}}</td>
+				        <td>{{elem.email}}</td>
+				        <td>{{elem.telefono}}</td>
+				        <td>{{elem.fechaInicio}}</td>
+				       <!--  <td>{{portabilidad.portacion.fecha_portabilidad | date: 'yyyy-MM-dd hh:mm:ss a'}}</td> -->
+				    </tbody>
+				  </table>
+				</div>
+			</div>
+		</div>
+	</div>
+<div>
+
